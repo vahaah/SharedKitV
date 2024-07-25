@@ -4,27 +4,27 @@
 import PackageDescription
 
 let package = Package(
-  name: "SharedKit",
+  name: "SharedKitV",
   platforms: [
     .iOS(.v17),
     .macOS(.v14),
   ],
   products: [
     .library(
-      name: "SharedKit",
-      targets: ["SharedKit"]
+      name: "SharedKitV",
+      targets: ["SharedKitV"]
     ),
   ],
   targets: [
     .target(
-      name: "SharedKit",
+      name: "SharedKitV",
       swiftSettings: [
         .enableExperimentalFeature("StrictConcurrency"),
       ]
     ),
     .testTarget(
-      name: "SharedKitTests",
-      dependencies: ["SharedKit"]
+      name: "SharedKitVTests",
+      dependencies: ["SharedKitV"]
     ),
   ]
 )
